@@ -26,10 +26,47 @@ console.log(updatedUserMessage); */
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
 //Operators Practice
-console.log(10 + 5); //addition
+/* console.log(10 + 5); //addition
 console.log(10 - 5); //subtraction
 console.log(10 * 5); //multiplication
 console.log(10 / 5); //division
-console.log("hello " + "world"); //+ operator can also be used for concatination of strings
+console.log("hello " + "world"); //+ operator can also be used for concatination of strings */
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Functions Practice
+
+//function invoked
+function greet() {
+    console.log("Hello javascript!")
+}
+
+greet(); //function call
+
+//function with parameters
+//default values can be assigned to parameters (message = "Hello!") like this
+function greetUser(userName, message = "Hello!") {
+    console.log(userName);
+    console.log(message);
+}
+
+greetUser("Naveen", "Doing great huh!");
+greetUser("Sid");
+
+//function cannot just take input values but also return values using return keyword
+function userMessage(userName, message = "Hello!") {
+    return "Hi, I am " + userName + ". " + message;
+}
+
+//vaule is returned to we need to store it somewhere like in a variable 
+const greetingMessage = userMessage("Naveen", "Doing great huh!"); 
+console.log(greetingMessage);
+
+const greetingMessage2 = userMessage("Sid"); 
+console.log(greetingMessage2);
+
+//functions can also be used for producing and returning values
+import { combine } from "./functionExercise.js";
+
+const sum = combine(5,4,2);
+console.log(sum);
