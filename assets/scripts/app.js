@@ -37,7 +37,7 @@ console.log("hello " + "world"); //+ operator can also be used for concatination
 //Functions Practice
 
 //function invoked
-function greet() {
+/* function greet() {
     console.log("Hello javascript!")
 }
 
@@ -70,3 +70,17 @@ import { combine } from "./functionExercise.js";
 
 const sum = combine(5,4,2);
 console.log(sum);
+ */
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Arrow functions practice 
+// We can use them for annonyous functions that have no name () => {}
+export default () => {
+    console.log("Hello world");
+}
+
+//with just one arg
+number => {
+    return number * number;
+}
+
