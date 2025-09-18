@@ -266,7 +266,7 @@ greeter(() => { console.log("HI this is greeter") }); */
 
 //Defining function inside of function
 //more alined to react 
-function init() {
+/* function init() {
     function subFunction() {
         console.log("Hello from sub function");
     }
@@ -274,6 +274,28 @@ function init() {
     subFunction();
 }
 
-init();
+init(); */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Template Literal practice (helps with the formating of string)
+
+const userName = "Naveen";
+//Default handling
+const message = "This is my \n" +
+"\"first\" message " + userName;
+
+console.log(message);
+
+//With template literal `` 
+const updatedMessage = 
+`Hi ${userName}${2+4},
+
+How are you doing today ? 
+
+Regards
+Javascript`;
+
+console.log(updatedMessage);
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
