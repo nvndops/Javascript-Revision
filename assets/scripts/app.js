@@ -165,10 +165,10 @@ const lastName = userData[1];
 this was the old way now we can use destructuring array to perform the same thing in less code */
 
 //Used destructuring here
-const [firstName, lastName] = ["Naveen", "Verma"];
+/* const [firstName, lastName] = ["Naveen", "Verma"];
 console.log(firstName);
 console.log(lastName);
-
+ */
 
 //Destructuring in object
 /* Old way of consuming the object values
@@ -181,14 +181,38 @@ const userName = user.name;
 const userAge = user.age; */
 
 //Destructuring object we have to use same key for the object values but we can give them alias "name: userName" like so
-const {name: userName, age} = {
+/* const {name: userName, age} = {
     name: "Naveen",
     age: 27,
 }
 
 console.log(userName);
 console.log(age);
-
+ */
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
+//Spread Operator practice
 
+//Spread operator on array
+const hobbies = ["cooking","coding"];
+
+const newHobbies = ["Gaming"];
+
+//const mergedHobbies = [hobbies, newHobbies]; 
+const mergedHobbies = [...hobbies, ...newHobbies];
+console.log(mergedHobbies)
+
+//Spread operator on object
+const user = {
+    name: "naveen",
+    age: 27,
+}
+
+const updatedUser = {
+    isAdmin: true,
+    ...user
+}
+
+console.log(updatedUser);
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
