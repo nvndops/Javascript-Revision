@@ -241,7 +241,7 @@ for (const hobby of hobbies) {
 
 //Passing functions as values to both inbuilt and custom functions
 
-function handleTimeout() {
+/* function handleTimeout() {
     console.log("Timed out!");
 }
 
@@ -260,6 +260,20 @@ function greeter(greetFn) {
     greetFn();
 }
 
-greeter(() => { console.log("HI this is greeter") });
+greeter(() => { console.log("HI this is greeter") }); */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Defining function inside of function
+//more alined to react 
+function init() {
+    function subFunction() {
+        console.log("Hello from sub function");
+    }
+
+    subFunction();
+}
+
+init();
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
