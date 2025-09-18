@@ -9,7 +9,6 @@ This project serves as a hands-on refresher for JavaScript fundamentals, coverin
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js installed on your system
 - A modern web browser
 
 ### Installation
