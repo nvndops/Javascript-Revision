@@ -194,7 +194,7 @@ console.log(age);
 //Spread Operator practice
 
 //Spread operator on array
-const hobbies = ["cooking","coding"];
+/* const hobbies = ["cooking","coding"];
 
 const newHobbies = ["Gaming"];
 
@@ -213,6 +213,28 @@ const updatedUser = {
     ...user
 }
 
-console.log(updatedUser);
+console.log(updatedUser); */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Control structures
+
+//If/else
+const password = prompt("Your Password");
+
+if ( password === "Hello" ) {
+    console.log("Hello works");
+} else if ( password === "hello" ) {
+    console.log("hello works");
+} else {
+    console.log("Access denied");
+}
+
+//for of loop
+const hobbies = ["Gaming","Cooking"];
+
+for (const hobby of hobbies) {
+    console.log(hobby);
+}
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
