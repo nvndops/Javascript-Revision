@@ -75,7 +75,7 @@ console.log(sum);
 
 //Arrow functions practice 
 // We can use them for annonyous functions that have no name () => {}
-export default () => {
+/* export default () => {
     console.log("Hello world");
 }
 
@@ -83,4 +83,43 @@ export default () => {
 number => {
     return number * number;
 }
+ */
+/* ----------------------------------------------------------------------------------------------------------------------------- */
 
+//Objects and classed practice
+//Object in js can be used to group multiple values together
+const person = {
+    personName: "naveen",
+    age: 27,
+
+    //functions inside objects are called methods
+    message() {
+        return "Hi, I am " + this.personName + " and I'm " + this.age + " years old."
+        //with this. we can access the property of this object
+    }
+}
+
+console.log(person.personName);
+
+const displayMessage = person.message();
+console.log(displayMessage);
+
+
+//Class practice
+//we can either create objects like that or create a blueprint for them as class 
+class User {
+    constructor(userName, age) {
+        this.userName = userName;
+        this.age = age;
+    }
+
+    greetings() {
+        console.log("Hello from user class")
+    }
+}
+
+const user1 = new User("naveen", 27);
+console.log(user1);
+user1.greetings();
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
