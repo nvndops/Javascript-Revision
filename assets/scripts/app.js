@@ -125,7 +125,8 @@ user1.greetings(); */
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
 //Arrays and Array method like map()
-const hobbies = ["Gaming","Coding","Cooking"];
+
+/* const hobbies = ["Gaming","Coding","Cooking"];
 console.log(hobbies[2]);
 
 hobbies.push("Sleeping");
@@ -151,6 +152,43 @@ console.log(updatedObjectHobbies);
 import { transformToObjects } from "./arrayExcercise.js";
 
 const numberArray = [1,2,3];
-console.log(transformToObjects(numberArray));
+console.log(transformToObjects(numberArray)); */
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Destructuring(array & object)
+
+/* const userData = ["Naveen", "Verma"];
+
+const firstName = userData[0];
+const lastName = userData[1];
+this was the old way now we can use destructuring array to perform the same thing in less code */
+
+//Used destructuring here
+const [firstName, lastName] = ["Naveen", "Verma"];
+console.log(firstName);
+console.log(lastName);
+
+
+//Destructuring in object
+/* Old way of consuming the object values
+ const user = {
+    name: "Naveen",
+    age: 27,
+}
+
+const userName = user.name;
+const userAge = user.age; */
+
+//Destructuring object we have to use same key for the object values but we can give them alias "name: userName" like so
+const {name: userName, age} = {
+    name: "Naveen",
+    age: 27,
+}
+
+console.log(userName);
+console.log(age);
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
