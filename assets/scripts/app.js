@@ -220,7 +220,7 @@ console.log(updatedUser); */
 //Control structures
 
 //If/else
-const password = prompt("Your Password");
+/* const password = prompt("Your Password");
 
 if ( password === "Hello" ) {
     console.log("Hello works");
@@ -235,6 +235,31 @@ const hobbies = ["Gaming","Cooking"];
 
 for (const hobby of hobbies) {
     console.log(hobby);
+} */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Passing functions as values to both inbuilt and custom functions
+
+function handleTimeout() {
+    console.log("Timed out!");
 }
+
+const handleTimeout2 = () => {
+    console.log("Timed out ... again!!")
+}
+
+setTimeout(handleTimeout, 2000);
+setTimeout(handleTimeout2, 3000);
+setTimeout(() => {
+    console.log("Timed out with an annonymous function!!")
+}, 4000);
+
+//custom function
+function greeter(greetFn) {
+    greetFn();
+}
+
+greeter(() => { console.log("HI this is greeter") });
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
