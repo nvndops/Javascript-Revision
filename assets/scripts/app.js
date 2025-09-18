@@ -88,7 +88,7 @@ number => {
 
 //Objects and classed practice
 //Object in js can be used to group multiple values together
-const person = {
+/* const person = {
     personName: "naveen",
     age: 27,
 
@@ -120,6 +120,37 @@ class User {
 
 const user1 = new User("naveen", 27);
 console.log(user1);
-user1.greetings();
+user1.greetings(); */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Arrays and Array method like map()
+const hobbies = ["Gaming","Coding","Cooking"];
+console.log(hobbies[2]);
+
+hobbies.push("Sleeping");
+console.log(hobbies);
+
+//.findIndex method takes all values and returnes the index
+const index = hobbies.findIndex((item) => {
+ item === "Coding";
+});
+//shorter way const index = hobbies.findIndex((item) =>  item === "Coding");
+console.log(index);
+
+//.map method takes all the values in array and modify them
+const updatedHobbies = hobbies.map((item) => item + "!");
+console.log(updatedHobbies);
+
+//converting strings in array to object through map
+//need to wrap the curly braces in paratheses to stop the curly braces acting like function container
+const updatedObjectHobbies = hobbies.map((item) => ({text: item}));
+console.log(updatedObjectHobbies);
+
+//exercise import and code
+import { transformToObjects } from "./arrayExcercise.js";
+
+const numberArray = [1,2,3];
+console.log(transformToObjects(numberArray));
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
