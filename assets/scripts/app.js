@@ -280,7 +280,7 @@ init(); */
 
 //Template Literal practice (helps with the formating of string)
 
-const userName = "Naveen";
+/* const userName = "Naveen";
 //Default handling
 const message = "This is my \n" +
 "\"first\" message " + userName;
@@ -296,6 +296,94 @@ How are you doing today ?
 Regards
 Javascript`;
 
-console.log(updatedMessage);
+console.log(updatedMessage); */
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+//Promises, Async, Await, Fetch, try and catch practice
+
+//1) Create a promise
+
+/* const p = new Promise( (resolve, reject) => {
+    const numberOfPeople = 10;
+
+    if (numberOfPeople > 5){
+        resolve("Success"); //fulfilled with value
+    } else {
+        reject("Not enough number of people"); //failure with reason
+    }
+});
+ */
+//2) Consume a promise with .then() & .catch() (old way of consuming promise)
+/* p.then( value => {
+    console.log(value);
+}).catch( (reason) => {
+    console.log(reason);
+}); */
+
+//3) Consume promise with async/await & try/catch (modern method of consuming promise with better syntax)
+/* const checkResults = async () => {
+    try {
+        const value = await p;
+        console.log(value);
+    } catch (reason) {
+        console.log(reason);
+    }
+}
+checkResults();
+ */
+//4) Why & Where use promises in web development
+
+// Vast majority of your code is synchronous.
+// const a = 1;
+// const b = 2;
+// const c = 3;
+// This is no problem, because these operations are very fast,
+// so they only freeze our program for a very short amount of time.
+
+// However, some operations may take a long time. We want to use
+// asynchronous code for them so they don't freeze our program for
+// so long. Asynchronous code was commonly implemented with
+// callback functions, but now increasingly with promises.
+// Most common examples of using promises in web development:
+// - On frontend: Network requests (e.g. Fetch API or Axios Library)
+// - On backend: Interacting with file system (e.g. reading a file)
+
+//5) Fetch API (most common example of promises)
+//traditional syntax(with then and catch)
+/* fetch('https://jsonplaceholder.typicode.com/users')
+    .then( res => {
+        if(!res.ok){
+            console.log("Problem");
+            return;
+        }
+
+        return res.json();
+    })
+    .then(data => {
+        console.log(data[3].username);
+    })
+    .catch(error => {
+        console.log(error);
+    }); */
+
+//modern syantax(with async and await)
+const apiHandler = async () => {
+    try{
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await res.json();
+
+        if(!res.ok){
+            console.log(data.description);
+            return;
+        }
+        
+        console.log(data[3].username);
+    } catch {
+        console.log(error);
+    }
+
+}
+
+apiHandler();
+
